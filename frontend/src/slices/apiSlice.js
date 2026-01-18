@@ -3,14 +3,11 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/api",
+    baseUrl: "https://rfp-management-system-nzih.onrender.com/",
   }),
   tagTypes: ["Rfp", "Vendor", "Proposal", "Comparison"],
 
   endpoints: (builder) => ({
-    /* =========================
-       RFP
-    ========================== */
 
     createRfpFromText: builder.mutation({
       query: (text) => ({
@@ -48,10 +45,6 @@ export const apiSlice = createApi({
       ],
     }),
 
-    /* =========================
-       Vendors
-    ========================== */
-
     getVendors: builder.query({
       query: () => "/vendors",
       providesTags: (result) =>
@@ -75,10 +68,6 @@ export const apiSlice = createApi({
       invalidatesTags: [{ type: "Vendor", id: "LIST" }],
     }),
 
-    /* =========================
-       Proposals
-    ========================== */
-
     getProposalsByRfp: builder.query({
       query: (rfpId) => `/proposals/by-rfp/${rfpId}`,
       providesTags: (result, error, rfpId) =>
@@ -93,10 +82,6 @@ export const apiSlice = createApi({
           : [{ type: "Proposal", id: `RFP-${rfpId}` }],
     }),
 
-    /* =========================
-       AI Comparison
-    ========================== */
-
     getComparison: builder.query({
       query: (rfpId) => `/comparison/${rfpId}`,
       providesTags: (result, error, rfpId) => [
@@ -106,10 +91,6 @@ export const apiSlice = createApi({
     }),
   }),
 });
-
-/* =========================
-   Hooks
-========================= */
 
 export const {
   useCreateRfpFromTextMutation,
