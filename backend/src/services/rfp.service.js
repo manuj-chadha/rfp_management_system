@@ -1,4 +1,3 @@
-const OpenAI = require("openai");
 const RFP = require("../models/rfp.model");
 
 const openai = new OpenAI({
