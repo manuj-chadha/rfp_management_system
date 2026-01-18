@@ -82,6 +82,7 @@ frontend/
 cd backend
 npm install
 npm run dev
+```
 
 
 ## Frontend Setup
@@ -89,6 +90,7 @@ npm run dev
 cd frontend
 npm install
 npm run dev
+```
 
 
 ## Main User Flow
@@ -150,18 +152,6 @@ All generated data is stored in MongoDB:
 - Generated proposals
 - AI scores and recommendations
 
-Refreshing the page does not trigger regeneration.
-
----
-
-## Why This Design
-
-- Keeps the system simple and testable
-- Avoids flaky email/IMAP dependencies
-- Clearly demonstrates AI integration
-- Easy to extend to real vendor workflows later
-
----
 
 ## Example Input
 
