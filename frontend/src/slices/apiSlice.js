@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://rfp-management-system-nzih.onrender.com/",
+    baseUrl: "https://rfp-management-system-nzih.onrender.com/api",
   }),
   tagTypes: ["Rfp", "Vendor", "Proposal", "Comparison"],
 
