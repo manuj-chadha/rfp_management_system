@@ -2,7 +2,7 @@
 
 A full-stack project that demonstrates how **AI can automate the RFP (Request for Proposal) lifecycle** — from writing RFPs in natural language to generating, comparing, and recommending vendor proposals.
 
-This project is built as part of an **SDE assignment** and focuses on:
+This project is built as part of an **SDE assignment** for **Aerchain** and focuses on:
 - clean backend design
 - practical AI usage
 - end-to-end workflow clarity
@@ -13,12 +13,11 @@ This project is built as part of an **SDE assignment** and focuses on:
 
 1. User writes an RFP in plain English  
 2. AI converts it into a structured RFP  
-3. User selects vendors  
-4. System generates realistic vendor proposals using AI  
-5. Proposals are parsed, scored, and stored  
-6. AI compares proposals and recommends the best vendor  
-
-No external emails, no IMAP, no hidden magic — everything is deterministic and testable.
+3. User selects vendors
+4. Mails are sent to the vendors
+5. System generates realistic vendor proposals using AI  
+6. Proposals are parsed, scored, and stored  
+7. AI compares proposals and recommends the best vendor  
 
 ---
 
